@@ -21,7 +21,7 @@
 
 ## 클라이언트 서버 모델
 
-<img src=""></img>
+<img src="https://github.com/leejh96/addinedu_frontend/blob/master/summary/images/img.png?raw=true"></img>
 
 - 사용자가 사용하는 디바이스(클라이언트)와 서비스 회사의 서버 컴퓨터가 1:1로 연결되어 있다는 가상의 구성
 - 클라이언트와 서버간의 통신 : Request(요청) / Response(응답) 세트로 구성된 통신
