@@ -76,7 +76,7 @@ Ex)
 <!DOCTYPE html>
 <html>
   <head>
-    웹사이트(앱) 관련되 정보
+    웹사이트(앱) 관련된 정보
   </head>
   <body>
     웹 사이트의 콘텐츠
@@ -134,6 +134,105 @@ https://www.w3schools.com/html/html_links.asp
 - 다른 페이지로 링크 연결
 - 같은 페이지에서 상하 이동 => 북마크 기능
 
+### HTML Lists
+
+https://www.w3schools.com/html/html_lists.asp
+
+- ul : **u**nordered **l**ist - 순서없는 목록
+- ol : **o**rdered **l**ist - 순서있는 목록
+- li : **l**ist **i**tem - 항목
+
+- dl : **d**escription **l**ist - 설명 목록
+- dt : **d**escription **t**itle(**t**heme) - 설명 목록 제목
+- dd : **d**escription **d**ata - 설명 목록 내용
+
+### HTML Table
+
+https://www.w3schools.com/html/html_tables.asp
+https://www.tablesgenerator.com/html_tables
+
+표 구성 요소 : 열(세로줄), 행(가로줄), 셀(칸)
+
+- table
+- thead : 표 구성 영역 - 열 제목 영역
+- tbody : 표 구성 영역 - 데이터 영역
+- tr : **t**able **r**ow - 표의 행
+- th : **t**able **h**eader - 열 제목 셀
+- td : **t**able **d**ata - 데이터 셀
+
 ## HTML MULTIMEDIA Contents
+
+### HTML Images
+
+https://www.w3schools.com/html/html_images.asp
+
+- img : image - 이미지 파일을 HTML 페이지에 삽입 / 빈 요소
+- attribute
+  - src : 이미지 파일의 경로/이름 정보
+  - alt : **alt**ernative - 대체 텍스트
+
+```
+<img src="이미지 파일의 경로/이름" alt="이미지 설명글" />
+```
+
+### HTML_File_Paths
+
+https://www.w3schools.com/html/html_filepaths.asp
+
+- 파일 경로 ≒ URL
+
+```
+URL
+www.w3schools.com/html/html_filepaths.asp
+www.w3schools.com/html/
+
+File 경로
+www.w3schools.com/html/html_filepaths.asp
+
+URL > File 경로
+```
+
+- 인터넷 주소
+
+  - IP(Internet Protocol) : 인터넷에서 사용하는 실제 주소 ex) 192.168.0.1
+  - Domain Name : IP주소를 대체하는 영어로 된 주소체계
+
+- URL(Uniform Resource Locator)
+  - 인터넷에서 사용하는 서버에 저장된 자원의 위치
+  - 자세한 인터넷 주소
+
+```
+URL
+https://codesandbox.io/s/html-css-ineej?file=/summary/html_css.md
+
+Domain Name
+https://codesandbox.io/
+```
+
+- 절대주소(URL)
+  - File 이나 Resource 를 찾거나 이동하기 위한 기준 지점이 서버의 주소(IP, 도메인 주소)
+  - 항상 같은 위치를 찾거나 이동할 수 있음
+
+```
+<a href="https://github.com/leejh96/addinedu_frontend/blob/master/README.md"></a>
+
+<img src="https://codesandbox.io/s/html-css-ineej?file=/summary/images/img.png" />
+```
+
+- 상대주소(URL)
+  - File 이나 Resource 를 찾거나 이동하기 위한 기준 지점이 이동하거나 찾으려 하는 파일의 위치가 기준
+  - 상황에 따라서 경로/주소 표시 형태가 변경될 수 있음
+
+```
+<a href="README.md"></a>
+
+../ : 상위폴더 이동
+<a href="../README.md"></a>
+
+<img src="summary/images/img.png" />
+
+summary 안에 html의 파일이 있는 경우
+<img src="images/img.png" />
+```
 
 # CSS
