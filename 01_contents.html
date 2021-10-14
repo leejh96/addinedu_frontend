@@ -47,15 +47,15 @@
     <h5>목차<h5>
     <ol>
       <!-- 1.같이 .이 있다면 ol 없다면 직접 입력 -->
-      <li>1 HTML4와의 차이점</a></li>
-      <li>2 일정 및 역사</a></li>
+      <li><a href="#num1">1 HTML4와의 차이점</a></li>
+      <li><a href="#num2"> 일정 및 역사</a></li>
       <li>3 브라우저 지원 현황</a></li>
       <li>4 HTML5 기반 암호화 표준화 진행</a></li>
       <li>5 같이보기</a></li>
       <li>6 각주</a></li>
       <li>7 외부 링크</a></li>
     </ol>
-    <h2>HTML4와의 차이점</h2>
+    <h2 id="num1">HTML4와의 차이점</h2>
     <hr />
     <ul>
       <li>
@@ -109,7 +109,7 @@
       </li>
     </ul>
     
-    <h2>일정 및 역사</h2>
+    <h2 id="num2">일정 및 역사</h2>
     <hr />
     <ul>
       <li>2007년 5월 HTML5와 Web Forums 2.0 스펙 채택 - 리뷰 기반으로</li>
@@ -379,5 +379,19 @@
     </table>
 
     <img src="summary/images/img.png" alt="client-server image" width="500"/>
+    
+    <video controls autoplay loop muted>
+      <source src="video/mov_bbb.mp4" type="video/mp4" />
+    </video>
+    <iframe 
+      width="560" 
+      height="315" 
+      src="https://www.youtube.com/embed/kK9oLiI1ZV0?autoplay=1&mute=1" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+    <a href="#">top</a>
   </body>
 </html>

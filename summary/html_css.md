@@ -133,6 +133,7 @@ https://www.w3schools.com/html/html_links.asp
 
 - 다른 페이지로 링크 연결
 - 같은 페이지에서 상하 이동 => 북마크 기능
+  - href에 #만 사용하게 되면 페이지의 처음으로 이동
 
 ### HTML Lists
 
@@ -234,5 +235,70 @@ https://codesandbox.io/
 summary 안에 html의 파일이 있는 경우
 <img src="images/img.png" />
 ```
+
+### HTML Video
+
+https://www.w3schools.com/html/html5_video.asp
+
+- video : 저장된 영상 파일을 해당 웹 페이지에 삽입
+
+```
+<video>
+  type은 주로 mp4만 사용한다.
+  <source src="영상 경로/이름" type="video/mp4" />
+</video>
+```
+
+- video attribute
+
+  - html5에서 추가된 속성
+  - name = "value" 형식에서 name만 쓰는 형식으로 변경
+  - controls : 동영상 컨트롤 버튼 표시
+  - loop : 반복 재생
+  - autoplay : 자동재생
+  - muted : 음소거
+    크롬에서는 autoplay를 활성화 하더라도 동영상에 원래 소리가 있는 영상이라면 자동재생 되지 않고 muted를 활성화해야 autoplay가 작동한다
+
+  youtube 영상을 가져오기 위해서는 해당 유튜브 영상에 공유를 눌러 퍼가기를 누르면 소스코드가 나오고 그 것을 복사 붙여넣기 하면된다.
+
+  youtube 영상을 자동재생을 하기 위해서는 복사해온 iframe에 src attribute에 끝에 autoplay=1&mute=1 을 입력한다.
+  이 때는 muted가 아닌 mute로 해야한다
+
+### HTML Semantic Elements
+
+https://www.w3schools.com/html/html5_semantic_elements.asp
+
+- 영역을 구분하는 태그(요소)를 의미있게 구분하고 영역을 설정하도록 하는 요소
+
+> header : 웹페이지 상단 영역 - 로고, 로그인, 메뉴
+>
+> nav : **nav**igation : 웹사이트 메뉴
+>
+> section : 콘텐츠를 담는 역역
+>
+> article : 짧은 글 / 한 내용으로 완성되는 글
+>
+> aside : 부수적인 내용 / 광고
+>
+> footer : 하단 영역 - 서브 로고 / 주소 / 연락처 / 소유권
+
+### HTML Block & Inline
+
+https://www.w3schools.com/html/html_blocks.asp
+
+- HTML Element는 기본적으로 각각의 영역을 가짐
+
+- HTML Elements의 특성(디자인 개념)
+
+  - Block 요소
+
+    - 항상 새 줄에서 표시(줄 바뀌어서 표시)
+    - Block 요소로 만들어지는 영역의 가로길이가 전체 너비에 채워짐
+    - 대표태그 : div - **div**ision - container 요소
+
+  - Inline 요소
+    - 한 줄에 나란히 표시됨(줄 바뀌지 않음)
+    - Inline 요소를 만들어지는 영역의 가로길이가 콘텐츠 크기만큼 차지함
+    - 대표태그 : span - container 요소
 
 # CSS
