@@ -404,6 +404,212 @@ div {}
 <p id="para" class="sentence">단락</p>
 
 p#para {} => p태그면서 id가 para
+
 p.sentence {} => p태그이면서 class가 sentence
+
 #para.sentence {}
 ```
+
+## CSS 작성방식
+
+- External : 외부파일
+- Internal : html 파일 내부의 style 태그에 작성
+- Inline : html element에 직접 작성
+
+## Color 이론
+
+> 색 혼합 방식
+>
+> - 가산 혼합 : 빛 혼합
+>
+>   - 혼합하는 색이 많을 수록 밝아짐, 모든 색을 혼합 => 흰색
+>   - 스크린 : 빛의 정보를 이용
+>   - 컬러모드 : R(ed)G(reen)B(lue)
+>
+> - 감산 혼합 : 잉크 혼합
+>   - 혼합하는 색이 많을 수록 어두워짐, 모든 색을 혼합 => 검정
+>   - 프린트 : 잉크 색을 사용
+>   - 컬러모드 : C(yan)M(agenta)Y(ellow)K(ey == black)
+
+> RGB 모드
+>
+> 컴퓨터가 사용하는 숫자 진법 : 2진법(0,1)
+>
+> 데이터 저장 최소 단위 : bit
+>
+> - 저장 공간 1칸 : 0, 1 중에 하나를 저장
+>   정보 표현 최소 단위 : byte(1byte = 8bit)
+>
+> RGB 컬러모드
+>
+> - Red, Green, Blue 각각 1byte씩으로 색 정보 표현
+> - 1byte = 8bit => 3byte = 24bit 트루컬러
+>
+> - CSS에서 색 표현 방식
+>   - 10진수 표시 방식(0~9)
+>     - 1byte = 8bit => 10진수 변형 : 0 ~ 255
+>     - rgb(150, 200, 56)
+>   - 16진수 표시 방식(0~9, A~F)
+>     - 2진수 4자리 => 16진수 1자리
+>     - 2진수 24bit => 16진수 6자리
+>     - #1AFFD3
+
+> 컴퓨터 용량 단위
+>
+> - 1000byte = 1KB
+> - 1000KB = 1MB
+> - 1000MB = 1GB
+> - 1000GB = 1TB
+
+> 투명모드
+>
+> - transparent, opacity, alpha => 투명모드 표현 단어
+>
+> CSS 표현
+>
+> - opacity : HTML Element 투명도 조절
+> - rgba() : 색의 투명도 조절
+
+## CSS 상속
+
+- 부모요소, 조상요소에 적용된 CSS style이 자식요소, 자손요소에 상속되어 적용되는 현상
+- 모든 CSS property의 style이 상속되는 것은 아님
+- 모든 HTML Element가 상속되어 적용되는 것은 아님
+
+```
+- html
+<div class="parent">
+  <p class="child">단락</p>
+</div>
+
+- css
+.parent{
+  color : red;
+}
+
+=> font 색상 적용은 상속이 되어 child 요소에도 글자 색이 빨간색으로 적용
+```
+
+## CSS Property Category
+
+- HTML Contents Styling
+
+  - Text Contents Styling
+  - Multimedia Contents Styling
+
+- HTML 구조 Styling
+
+## Text Contents Styling
+
+### CSS Text
+
+https://www.w3schools.com/css/css_text.asp
+
+> color
+>
+> - 글꼴 색
+
+> text-align
+>
+> - left, center, right, justfy(양쪽맞춤)
+
+> text-decoration : 텍스트 line
+>
+> - overline, line-through, underline,
+
+> text-indent : 들여쓰기
+
+> letter-spacing : 자간
+>
+> - 양수, 음수값 사용 가능
+
+> line-height : 줄 높이
+>
+> - 텍스트 높이를 포함한 전체 줄 높이
+> - 고정값 : px
+> - 배수값 : 단위없이 숫자(소수점 가능), 글꼴 크기에 비례
+
+> white-space : 줄바꿈 설정
+>
+> - wrap(default), nowrap(화면이 줄어도 줄 안바뀌게 하기)
+
+### CSS Font
+
+> font-family
+>
+> 글꼴 종류 적용
+>
+> - 글꼴 종류를 여러개 적용
+>
+>   - 순서대로 폰트를 찾아서 적용
+>
+> - 폰트는 사용자 컴퓨터(client)에서 찾는 것이 기본
+> - 폰트 종류 적용시 마지막에 브라우저 기본 폰트를 적용
+>   - 고딕 : sans-serif
+>   - 명조 : serif;
+
+```
+p {
+  font-family : "맑은 고딕", 돋움, sans-serif;
+}
+
+=> 맑은고딕 폰트를 찾고 있으면 적용, 없으면 돋움을 찾고 있으면 적용, 없으면 sans-serif(브라우저 기본 폰트)를 적용
+
+=> 폰트에 공백이 있는경우에는 ""를 사용
+```
+
+> 폰트 카테고리
+>
+> - 고딕(sans-serif), 명조(serif)
+
+> 웹 폰트
+>
+> - font-family 속성은 브라우저에서 렌더링을 할 때 클라이언트에서 폰트를 찾는 기능
+> - font 파일을 서버에 저장 후 클라이언트 요청에 따라 Resource를 전송할 때 font 파일도 같이 전송해서 font-family 속성이 전송된 폰트를 사용할 수 있도록 하는 폰트 사용 방식
+> - 사용자의 디바이스(클라이언트)에 저장된 폰트에 상관없이 서버에 저장된 폰트를 사용하므로 모든 사용자가 동일한 폰트를 사용
+> - 웹에서 사용할 수 있는 형식의 폰트 파일 확장자 : .woff, .eof
+
+> - 웹 폰트 서비스
+>   - 개발자가 웹 폰트 파일 변환 작업없이 바로 웹 폰트를 사용할 수 있게 해줌
+>   - 구글 폰트(Google Font): 영문 (https://fonts.google.com/?subset=latin-ext)
+>   - 눈누 폰트(Noonnu) : 한글 (https://noonnu.cc/)
+
+> font-size
+>
+> -px로 크기 설정
+
+> font-weight
+>
+> - font 굵기 : normal/bold, 100 ~ 900 까지 100단위 숫자로 항상 모든 굵기가 존재하는 것은 아니고 폰트의 종류에 따라 다름
+
+> font-style
+>
+> - 이태리체(기울임꼴)
+
+### CSS links
+
+https://www.w3schools.com/css/css_link.asp
+
+- 4가지 상태 구분을 해서 각각 스타일링 할 수 있음
+
+```
+a:link : 일반 상태
+a:visited : 방문한 상태
+a:hover : 마우스를 갖다 댄 상태
+a:active : 마우스 버튼을 누르고 있는 상태
+```
+
+### CSS list
+
+- 목록에 자동으로 생성되는 기호, 숫자 제거
+
+```
+ol {
+  list-style-type : none;
+}
+```
+
+### CSS Table
+
+- Table 테두리 속성은 틈이 벌어져 있는 테두리가 기본
+- border-collapse: collapse 설정 => 테두리 사이 틈을 제거
