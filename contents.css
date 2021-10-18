@@ -13,6 +13,7 @@ body {
 h1 {
   font-family: "Roboto", sans-serif;
   font-weight: 100;
+  border-bottom: 5px solid gray;
 }
 
 p {
@@ -20,11 +21,16 @@ p {
   font-weight: bold;
   font-style: italic;
   font-size: 20px;
+  margin-bottom: 24px;
 }
 
 ol {
   font-family: "MaruBuri-Regular", serif;
   list-style-type: none;
+  border: 1px solid black;
+  width: 280px;
+  padding: 50px;
+  background-color: lightgray;
 }
 
 ul {
@@ -55,4 +61,18 @@ a:active {
 
 table {
   border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+th,
+td {
+  border: 1px solid gray;
+}
+
+img {
+  width: 500;
+}
+
+video {
+  width: 500;
 }

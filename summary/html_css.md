@@ -613,3 +613,141 @@ ol {
 
 - Table 테두리 속성은 틈이 벌어져 있는 테두리가 기본
 - border-collapse: collapse 설정 => 테두리 사이 틈을 제거
+
+## Box Styling
+
+- Box : 네모난 형태의 영역, 콘텐츠 => HTML 모든 요소
+
+> Box Model Styling(Box 스타일링 속성의 모음)
+>
+> - 크기 : 가로(너비), 세로(높이) 길이
+> - 여백 : 안쪽 여백(padding), 바깥 여백(margin)
+> - 테두리
+> - 배경 : 콘텐츠 영역과 안쪽 여백 영역에만 적용
+
+### height / width
+
+> - auto : default - 값을 지정하지 않았을 때 적용되는 값
+>
+>   - width : 너비가 부모요소를 기준으로 전체에 채워짐
+>   - height : 콘텐츠의 높이 만큼 채워짐
+>
+> - px : px 단위로 고정된 수치값 적용
+> - 픽셀은 정수단위 소수점으로 쓸수는 있어도 적용이되진 않음 반올림으로 처리됨
+
+> - % : % 단위로 유동적인 수치값 적용
+>   - 부모요소를 기준으로 부모요소의 크기가 변경되면 맞춰서 같이 변경 => 반응형 웹페이지에 사용
+>   - width : 부모 요소를 기준으로 일정 비율만큼 적용
+>   - height : 부모 요소를 기준으로 일정 비율만큼 적용, 부모요소가 auto일때는 적용되지 않음
+
+### padding
+
+> 개별 적용
+>
+> - padding-top : 위
+> - padding-right : 오른쪽
+> - padding-bottom : 아래
+> - padding-left : 왼쪽
+
+> 축약표현
+>
+> - padding : 값
+> - 값 4개 : 4방향 각각 수치값 적용
+> - 값 3개 : top (right-left) bottom
+> - 값 2개 : (top-bottom) (right-left)
+> - 값 1개 : 4방향 전체 공통 적용
+
+### border
+
+- 테두리 스타일 : 굵기, 형태, 색깔
+- 테두리 방향
+
+```
+border : 굵기 형태 색;
+
+border : 1px solid black;
+
+border-top: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+border-left: 1px solid black;
+```
+
+### margin
+
+- 바깥여백
+- 사용 방법 : padding과 같음
+
+### background
+
+- 배경색, 배경이미지
+
+> 배경색 : background-color
+>
+> - (R)ed, (G)reen, (B)lue, (A)lpha
+> - 색 코드값
+>   - 색 이름 : red, blue
+>   - 16진수 : #FF[R]FF[G]FF[B]
+>   - 10진수 : rgb(200[R:0~255], 125[G:0~255], 38[B:0~255])
+>   - 10진수 + 투명 : rgba(200, 125, 38, 0.5[A:0~1])
+
+> 배경이미지 : background-image
+>
+> - url() : 이미지 파일 경로/이름
+> - 특징 : 이미지 반복시켜서 영역을 채우는 것이 기본성질
+>
+> - 배경이미지 반복 : background-repeat
+>   - repeat(default), no-repeat, repeat-x, repeat-y(x방향 혹은 y방향만 반복)
+> - 배경이미지 고정 : background-attachment
+>   - fixed : 배경이미지를 고정(스크롤을 내려도 같이 이미지가 내려가지않고 고정됨)
+> - 배경이미지 위치 : background-position
+>   - x, y 좌표값 표시 ex) background-positon : 500px 200px;
+
+### Box model과 Block/Inline의 관계
+
+- Block : 박스모델이 제대로 적용됨
+- Inline : 박스모델이 제대로 적용되지 않음
+  - width/height, margin이 적용되지 않음
+
+### display 속성
+
+> 한줄에 여러 박스를 표시하면서(inline), 박스모델도 적용(block)
+> inline-block 성질을 사용
+
+- 박스가 화면에 표시될 때 원래 성질을 변경
+- 값 : block, inline, inline-block
+
+## Multimedia Contents Styling
+
+> 콘텐츠(이미지, 비디오) 크기, 여백 스타일링 => Box model
+> 이미지, 비디오는 원본을 유지하면서 크기를 변화시키고 싶을 때 width나 height 중 하나의 값만 넣어주면 자동적으로 비율을 유지시켜준다.
+
+## Layout Styling
+
+> 구분 영역(박스) 크기, 여백 스타일링 => Box model
+>
+> 구분 영역(박스)의 배치
+
+### flex
+
+> display : flex;
+>
+> - flex 배치 적용
+>
+> flex-direction : 배치 방향
+>
+> - row(default), row-reverse, column, column-reverse
+>
+> flex-wrap : 줄바꿈
+>
+> - wrap, nowrap(defalut)
+>
+> justify-content : 가로방향 정렬
+>
+> - flex-start, flex-end, center
+> - space-around, space-between
+>
+> align-items : 세로방향 정렬
+>
+> - flex-start, flex-end, center
+> - baseline(item들의 높이를 맞춤), stretch(높이를 컨테이너에 맞춤)

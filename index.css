@@ -1,0 +1,196 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  /* line-height: 1; */
+  font-family: "Noto Sans KR", sans-serif;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* a 태그에 대한 reset은 필요시 추가 */
+/* inline요소(img)사이에는 약간의 여백이 있는데 이 여백은 css로 컨트롤할 수 없다. */
+/* 따라서 display : block으로 바꾸어서 여백을 없애준다. */
+img {
+  display: block;
+}
+video {
+  display: block;
+}
+
+/* page css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  /* 픽셀은 정수단위 소수점으로 쓸수는 있어도 적용이되진 않음 반올림으로 처리됨 */
+  padding: 37px 100px;
+}
+.logo {
+}
+/* 가로배치 되는 자식요소를 기준으로 부모요소에 flex를 적용해야 함 */
+.gnb {
+}
+.gnb-list {
+  display: flex;
+}
+.gnb-list-item {
+  margin-left: 60px;
+}
+.gnb-list-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+.gnb-list-link:hover {
+  color: rgb(16, 201, 195);
+}
+.section01 {
+  text-align: center;
+  padding: 120px 0;
+}
+.section01-heading {
+}
+.section01-para {
+  width: 500px;
+  /* 마진을 좌우가 같게 만든다 위 아래는 해당 x*/
+  margin: 0 auto;
+}
+
+.group {
+  display: flex;
+}
+.grid-visual {
+  width: 340px;
+  height: 300px;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.sub-logo {
+  margin-left: 100px;
+}
+.sns-list {
+  margin-right: 100px;
+}
