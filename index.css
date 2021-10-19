@@ -155,7 +155,7 @@ video {
   display: flex;
 }
 .gnb-list-item {
-  margin-left: 60px;
+  margin-left: 30px;
 }
 .gnb-list-link {
   color: #333;
@@ -167,30 +167,95 @@ video {
 }
 .section01 {
   text-align: center;
-  padding: 120px 0;
+  padding: 100px 0;
+  background-color: #f2f2f2;
 }
 .section01-heading {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
 }
 .section01-para {
   width: 500px;
   /* 마진을 좌우가 같게 만든다 위 아래는 해당 x*/
   margin: 0 auto;
+  color: #999999;
 }
 
 .group {
   display: flex;
+  justify-content: center;
 }
 .grid-visual {
   width: 340px;
   height: 300px;
 }
+.grid-visual.video-wrap {
+  width: 340px;
+  height: 300px;
+  overflow: hidden;
+}
+.grid-visual.video {
+  width: auto;
+  height: 300px;
+}
 .footer {
   display: flex;
   justify-content: space-between;
+  background-color: #111111;
+  color: #999999;
+  height: 280px;
+  box-sizing: border-box;
+  padding: 100px 100px 0;
 }
 .sub-logo {
-  margin-left: 100px;
+}
+.sub-logo-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 .sns-list {
-  margin-right: 100px;
 }
+
+/* 1024 이하 */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 37px 50px;
+  }
+  .group {
+    flex-wrap: wrap;
+    width: 680px;
+    margin: 0 auto;
+  }
+  .footer {
+    padding: 100px 50px 0;
+  }
+}
+
+/* 768 이하 */
+@media screen and (max-width: 768px) {
+  .section01-heading {
+    font-size: 26px;
+  }
+  .section01-para {
+    width: auto;
+    text-align: justify; /* 양쪽 맞춤 */
+    padding: 0 20px;
+  }
+  .group {
+    flex-wrap: wrap;
+    width: 340px;
+  }
+  .footer {
+    display: block;
+    height: auto;
+    padding: 50px 20px;
+  }
+  .sub-logo {
+    margin-bottom: 20px;
+  }
+}
+
+/* smartphone 최소 해상도 크기 : 320px(옛날) 360px(최근) */
