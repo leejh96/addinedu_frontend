@@ -145,6 +145,13 @@ video {
   justify-content: space-between;
   /* 픽셀은 정수단위 소수점으로 쓸수는 있어도 적용이되진 않음 반올림으로 처리됨 */
   padding: 37px 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 990;
 }
 .logo {
 }
@@ -165,10 +172,44 @@ video {
 .gnb-list-link:hover {
   color: rgb(16, 201, 195);
 }
+.hamburger {
+  display: none;
+}
 .section01 {
+  position: relative;
   text-align: center;
+  height: 300px;
   padding: 100px 0;
   background-color: #f2f2f2;
+  box-sizing: border-box;
+  margin-top: 99px;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+.slide.in {
+  transition: left 1s;
+  left: 0;
+}
+.slide.jump {
+  left: 100%;
+}
+.slide.out {
+  left: -100%;
+  transition: left 1s;
+}
+.btn-wrap {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  width: 100%;
+  /* text-align: center; 인라인 요소에도 적용 */
 }
 .section01-heading {
   font-size: 40px;
@@ -181,7 +222,9 @@ video {
   margin: 0 auto;
   color: #999999;
 }
-
+.tab {
+  display: none;
+}
 .group {
   display: flex;
   justify-content: center;
@@ -236,6 +279,52 @@ video {
 
 /* 768 이하 */
 @media screen and (max-width: 768px) {
+  .header {
+    height: auto;
+  }
+
+  .header.on {
+    height: 100%;
+  }
+
+  .gnb {
+    display: none;
+  }
+
+  .gnb.on {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
+
+  .gnb-list {
+    display: block;
+    margin-top: 200px;
+  }
+
+  .gnb-list-item {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 90; /* 박스 앞뒤 순서 지정 */
+  }
+
+  .hamburger > img {
+    width: 100%;
+  }
   .section01-heading {
     font-size: 26px;
   }
@@ -244,9 +333,26 @@ video {
     text-align: justify; /* 양쪽 맞춤 */
     padding: 0 20px;
   }
+  .tab {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .tab-item {
+    padding: 10px;
+    background-color: skyblue;
+    margin: 5px;
+  }
+  .tab-item.active {
+    background-color: pink;
+  }
   .group {
     flex-wrap: wrap;
     width: 340px;
+    display: none;
+  }
+  .group.active {
+    display: block;
   }
   .footer {
     display: block;
