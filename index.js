@@ -38,13 +38,15 @@ const slideAnimation = () => {
     slide[current].classList.remove("in", "jump");
     slide[current].classList.add("out");
 
-    slide[next].classList.remove("jump", "out");
+    slide[next].classList.remove("out", "jump");
     slide[next].classList.add("in");
 
     current = next;
     next++;
   }, 2000);
 };
+
+slideAnimation();
 
 const playBtn = document.querySelector(".btn-play");
 const stopBtn = document.querySelector(".btn-stop");
