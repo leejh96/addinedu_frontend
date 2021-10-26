@@ -342,6 +342,7 @@ video {
     padding: 10px;
     background-color: skyblue;
     margin: 5px;
+    cursor: pointer;
   }
   .tab-item.active {
     background-color: pink;
