@@ -791,6 +791,19 @@ border-left: 1px solid black;
 > - flex-start, flex-end, center
 > - baseline(item들의 높이를 맞춤), stretch(높이를 컨테이너에 맞춤)
 
+### CSS position
+
+> position : 박스를 독립적으로 좌표를 사용해서 위치를 지정
+>
+> - value : static, relative, absolute, fixed
+
+> position 속성을 사용하면 위치를 정해주는 좌표설정 property
+> top, right, bottom, left
+
+> position 속성값중 absolute, fixed 적용하면 width 특성이 변경
+>
+> - width 부모요소를 기준으로 채워지는 성질 => 자식요소에 맞춰지는 성질
+
 ## 반응형 웹 디자인
 
 - PC 모니터, 태블릿 화면, 스마트 폰 화면 등 여러 디바이스 화면에 콘텐츠를 잘 전달할 수 있도록 레이아웃을 적절하게 변경되도록 하는 웹 디자인 방식
